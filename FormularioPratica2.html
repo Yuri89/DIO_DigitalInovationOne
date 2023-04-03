@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form onsubmit="" method="get">
+    <label>Nome:<input type="text" name="nome"></div></label><p>
+    <label>Idade:<input type="range" min="5" max="98" name="idade" onchange="rangeSlide(this.value)"><span id="tamanhoValor">0</span></label><p>
+    <label>Convenio:<p>
+        Particular<input type="checkbox" name="convenio[]" value="particular"><p>
+            Data de Validade<input type="date" name="DataValidade"><p>
+        SUS<input type="checkbox" name="convenio[]" value="sUS"><p>
+            Data de Validade<input type="date" name="DataValidade"><p>
+    </label><p>
+    <label>Comorbidade:<p>
+        Sim<input type="radio" name="Comorbidade" value="sim">
+        Não<input type="radio" name="Comorbidade" value="nao">
+    </label><p>
+    <label>Tipo sanguineo:<p>
+        A+<input type="radio" name="tipoSanguineo" value="aMAIS">
+        A-<input type="radio" name="tipoSanguineo" value="aMENOS">
+        B+<input type="radio" name="tipoSanguineo" value="bMAIS"><p>
+        B-<input type="radio" name="tipoSanguineo" value="bMENOS">
+        AB+<input type="radio" name="tipoSanguineo" value="abMAIS">
+        AB-<input type="radio" name="tipoSanguineo" value="abMENOS"><p>
+        O+<input type="radio" name="tipoSanguineo" value="oMAIS">
+        O-<input type="radio" name="tipoSanguineo" value="oMENOS">
+    </label><p>
+    <label><button type="reset" name="excluirForm">Limpar</button></label>
+    <label><button type="submit" name="enviarForm">Enviar</button></label>      
+    </form>
+    <script type="text/javascript">
+        function rangeSlide(value){
+            document.getElementById("tamanhoValor").innerHTML=value;
+        }
+    </script>
+</body>
+</html>
